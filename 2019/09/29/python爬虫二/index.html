@@ -74,25 +74,19 @@
   };
 </script>
 
-  <meta name="description" content="安装Python3原因 Linux不比window好安装python,折腾了好久,终于成功安装上了python,window上一个安装包完事,可惜就是Linux上python版本太低不好使,还要更换为3版本,百度了好久,教程上总是实践起来各种错误,现在终于安装上了,特将经验分享于此.">
-<meta name="keywords" content="Linux,Python">
+  <meta name="description" content="Python 爬虫入门二爬虫的基本结构 对于爬虫来说,基本结构可以分解为:请求,解析,储存,然后再这三大步骤中在进行细分:调度器,储存队列优先级等对请求对象,数据库储存对象等,下面仅仅是简单的介绍应用而已. 请求器初级 大家都知道,我们的日常上网行为都是在浏览器上进行的,也许有人清楚地知道网络行为,实际上我们在浏览每一个网页时候,都会向服务器进行request后,服务器就会define reque">
+<meta name="keywords" content="Python,Python-Spider">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux安装python3">
-<meta property="og:url" content="http://yoursite.com/2019/05/28/python3/index.html">
+<meta property="og:title" content="python爬虫二">
+<meta property="og:url" content="http://yoursite.com/2019/09/29/python爬虫二/index.html">
 <meta property="og:site_name" content="SunRelease">
-<meta property="og:description" content="安装Python3原因 Linux不比window好安装python,折腾了好久,终于成功安装上了python,window上一个安装包完事,可惜就是Linux上python版本太低不好使,还要更换为3版本,百度了好久,教程上总是实践起来各种错误,现在终于安装上了,特将经验分享于此.">
+<meta property="og:description" content="Python 爬虫入门二爬虫的基本结构 对于爬虫来说,基本结构可以分解为:请求,解析,储存,然后再这三大步骤中在进行细分:调度器,储存队列优先级等对请求对象,数据库储存对象等,下面仅仅是简单的介绍应用而已. 请求器初级 大家都知道,我们的日常上网行为都是在浏览器上进行的,也许有人清楚地知道网络行为,实际上我们在浏览每一个网页时候,都会向服务器进行request后,服务器就会define reque">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://s2.ax1x.com/2019/09/28/uM7sN8.png">
-<meta property="og:image" content="https://s2.ax1x.com/2019/09/28/uM7c9g.png">
-<meta property="og:image" content="https://s2.ax1x.com/2019/09/28/uM7y4S.png">
-<meta property="og:image" content="https://s2.ax1x.com/2019/09/28/uM7g3Q.png">
-<meta property="og:image" content="https://s2.ax1x.com/2019/09/28/uM72cj.png">
-<meta property="og:updated_time" content="2019-09-27T16:59:42.685Z">
+<meta property="og:updated_time" content="2019-10-02T14:19:51.414Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux安装python3">
-<meta name="twitter:description" content="安装Python3原因 Linux不比window好安装python,折腾了好久,终于成功安装上了python,window上一个安装包完事,可惜就是Linux上python版本太低不好使,还要更换为3版本,百度了好久,教程上总是实践起来各种错误,现在终于安装上了,特将经验分享于此.">
-<meta name="twitter:image" content="https://s2.ax1x.com/2019/09/28/uM7sN8.png">
-  <link rel="canonical" href="http://yoursite.com/2019/05/28/python3/">
+<meta name="twitter:title" content="python爬虫二">
+<meta name="twitter:description" content="Python 爬虫入门二爬虫的基本结构 对于爬虫来说,基本结构可以分解为:请求,解析,储存,然后再这三大步骤中在进行细分:调度器,储存队列优先级等对请求对象,数据库储存对象等,下面仅仅是简单的介绍应用而已. 请求器初级 大家都知道,我们的日常上网行为都是在浏览器上进行的,也许有人清楚地知道网络行为,实际上我们在浏览每一个网页时候,都会向服务器进行request后,服务器就会define reque">
+  <link rel="canonical" href="http://yoursite.com/2019/09/29/python爬虫二/">
 
 
 <script id="page-configurations">
@@ -106,7 +100,7 @@
   };
 </script>
 
-  <title>Linux安装python3 | SunRelease</title>
+  <title>python爬虫二 | SunRelease</title>
   
 
 
@@ -247,7 +241,7 @@
   
   
   <div class="post-block post">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/28/python3/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/29/python爬虫二/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="SunRelease">
@@ -259,7 +253,7 @@
       <meta itemprop="name" content="SunRelease">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">Linux安装python3
+        <h1 class="post-title" itemprop="name headline">python爬虫二
 
           
         </h1>
@@ -275,7 +269,7 @@
                 
               
 
-              <time title="创建时间：2019-05-28 00:08:38" itemprop="dateCreated datePublished" datetime="2019-05-28T00:08:38+08:00">2019-05-28</time>
+              <time title="创建时间：2019-09-29 23:47:32" itemprop="dateCreated datePublished" datetime="2019-09-29T23:47:32+08:00">2019-09-29</time>
             </span>
           
             
@@ -286,7 +280,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-09-28 00:59:42" itemprop="dateModified" datetime="2019-09-28T00:59:42+08:00">2019-09-28</time>
+                <time title="修改时间：2019-10-02 22:19:51" itemprop="dateModified" datetime="2019-10-02T22:19:51+08:00">2019-10-02</time>
               </span>
             
           
@@ -296,7 +290,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Python-Spider/" itemprop="url" rel="index"><span itemprop="name">Python-Spider</span></a></span>
 
                 
                 
@@ -323,43 +317,91 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="安装Python3"><a href="#安装Python3" class="headerlink" title="安装Python3"></a>安装Python3</h1><h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><ul>
-<li>Linux不比window好安装python,折腾了好久,终于成功安装上了python,window上一个安装包完事,可惜就是Linux上python版本太低不好使,还要更换为3版本,百度了好久,教程上总是实践起来各种错误,现在终于安装上了,特将经验分享于此.</li>
-</ul>
-<a id="more"></a>
-<h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><h4 id="先安装python依赖库以及扩展包"><a href="#先安装python依赖库以及扩展包" class="headerlink" title="先安装python依赖库以及扩展包"></a>先安装python依赖库以及扩展包</h4><ul>
-<li>yum 源要保证能用,因为用到yum install [包名],尽量选择国内源,例如阿里云或者清华源</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum groupinstall &apos;Development Tools&apos; &amp;&amp; yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel &amp;&amp; yum -y epel-release</span><br><span class="line"></span><br><span class="line">wget -c https://www.python.org/ftp/python/3.6.2/Python-3.6.2.tgz        #下载官网Linux-Python3包</span><br></pre></td></tr></table></figure>
-<h3 id="解压python包"><a href="#解压python包" class="headerlink" title="解压python包"></a>解压python包</h3><ul>
-<li>这里使用了tar解压命令,或者直接进入图形界面解压也行</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tar -xvzf Python-3.6.2.tgz      #解压</span><br><span class="line"></span><br><span class="line">cd Python-3.6.2/                #进入根目录</span><br></pre></td></tr></table></figure>
-<h3 id="添加配置"><a href="#添加配置" class="headerlink" title="添加配置"></a>添加配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">./configure --prefix=/usr/python</span><br><span class="line"></span><br><span class="line">#注意这里,如果出现上面bash错误,原因是缺少依赖库,请先执行下面命令</span><br><span class="line">yum install openssl-devel</span><br></pre></td></tr></table></figure>
-<h3 id="编译和执行源码"><a href="#编译和执行源码" class="headerlink" title="编译和执行源码"></a>编译和执行源码</h3><ul>
-<li>该过程花费3-8分钟</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make&amp;&amp;make install      #根目录下操作</span><br></pre></td></tr></table></figure>
-<h3 id="建立软链"><a href="#建立软链" class="headerlink" title="建立软链"></a>建立软链</h3><ul>
-<li>该步骤是让python指向最新版,因为centos上自带Python2.7版</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mv /usr/bin/python /usr/bin/python.bak</span><br><span class="line"></span><br><span class="line">ln -s /usr/python/bin/python3 /usr/bin/python</span><br><span class="line"></span><br><span class="line">ln -s /usr/python/bin/pip3.6  /usr/bin/pip</span><br><span class="line"></span><br><span class="line">rm -rf /usr/bin/pip</span><br></pre></td></tr></table></figure>
-<h3 id="解决yum源出错问题"><a href="#解决yum源出错问题" class="headerlink" title="解决yum源出错问题"></a>解决yum源出错问题</h3><ul>
-<li>因为初始时,yum源是指向python2.7的,更换默认版本后,也要更换yum配置指向python2.7</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">修改yum配置文件</span><br><span class="line"></span><br><span class="line">第一步:</span><br><span class="line"></span><br><span class="line">vim /usr/bin/yum   #vim操作可以搜索一下</span><br><span class="line"></span><br><span class="line">把文件头部的#!/usr/bin/python改成#!/usr/bin/python2.7保存退出。</span><br><span class="line"></span><br><span class="line">第二步:</span><br><span class="line">vim /usr/libexec/urlgrabber-ext-down</span><br><span class="line"></span><br><span class="line">#把文件头部的#!/usr/bin/python改成#!/usr/bin/python2.7保存退出。</span><br></pre></td></tr></table></figure>
+        <h1 id="Python-爬虫入门二"><a href="#Python-爬虫入门二" class="headerlink" title="Python 爬虫入门二"></a>Python 爬虫入门二</h1><h3 id="爬虫的基本结构"><a href="#爬虫的基本结构" class="headerlink" title="爬虫的基本结构"></a>爬虫的基本结构</h3><ul>
+<li>对于爬虫来说,基本结构可以分解为:<strong>请求</strong>,<strong>解析</strong>,<strong>储存</strong>,然后再这三大步骤中在进行细分:调度器,储存队列优先级等对请求对象,数据库储存对象等,下面仅仅是简单的介绍应用而已.</li>
+</ul><h4 id="请求器初级"><a href="#请求器初级" class="headerlink" title="请求器初级"></a>请求器初级</h4><ul>
+<li>大家都知道,我们的日常上网行为都是在浏览器上进行的,也许有人清楚地知道网络行为,实际上我们在浏览每一个网页时候,都会向服务器进行request后,服务器就会define request,然后发送response给客户端,客户端再进行确认后,渲染到浏览器上,其中用户交互时,会不断的get,post数据data到服务器,数据再实现相应的回应请求,这样基本就实现了请求功能.</li>
+</ul><a id="more"></a>
+
 <ul>
-<li>演示</li>
+<li>为什么用python进行爬虫研究呢,主要是python开发时间短,而且第三方库引进可以大大减少造轮子的时间,大部分请求的工作可以直接引用k神的requests这个package就可以实现基本的请求功能了.</li>
 </ul>
-<p><img src="https://s2.ax1x.com/2019/09/28/uM7sN8.png" alt="uM7sN8.png"></p>
-<p><img src="https://s2.ax1x.com/2019/09/28/uM7c9g.png" alt="uM7c9g.png"></p>
-<h3 id="测试pip"><a href="#测试pip" class="headerlink" title="测试pip"></a>测试pip</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">首先安装epel扩展源：</span><br><span class="line">yum -y install epel-release</span><br><span class="line">　　</span><br><span class="line">更新完成之后，就可安装pip：</span><br><span class="line">yum -y install python-pip</span><br><span class="line"></span><br><span class="line">最后测试pip命令:</span><br><span class="line">pip -help</span><br></pre></td></tr></table></figure>
 <ul>
-<li>演示</li>
+<li>首先安装该库</li>
 </ul>
-<p><img src="https://s2.ax1x.com/2019/09/28/uM7y4S.png" alt="uM7y4S.png"></p>
-<p><img src="https://s2.ax1x.com/2019/09/28/uM7g3Q.png" alt="uM7g3Q.png"></p>
-<h3 id="pip测试成功-更换版本完成"><a href="#pip测试成功-更换版本完成" class="headerlink" title="pip测试成功,更换版本完成"></a>pip测试成功,更换版本完成</h3><p><img src="https://s2.ax1x.com/2019/09/28/uM72cj.png" alt="uM72cj.png"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install requests</span><br></pre></td></tr></table></figure>
+<ul>
+<li>对网址进行请求</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># -*- coding : utf-8 -*-</span><br><span class="line"></span><br><span class="line">def get_response():</span><br><span class="line"></span><br><span class="line">    url=&apos;www.baidu.com&apos;</span><br><span class="line"></span><br><span class="line">    response=requests.get(url=url)                  #请求数据</span><br><span class="line"></span><br><span class="line">    if response.status_code==200:</span><br><span class="line"></span><br><span class="line">        res1=response.text                          #编码response</span><br><span class="line"></span><br><span class="line">        res2=response.content.decode(&apos;utf-8&apos;)       #编码response</span><br><span class="line"></span><br><span class="line">    else:</span><br><span class="line"></span><br><span class="line">        print(&quot;requests fail&quot;)</span><br><span class="line"></span><br><span class="line">        pass</span><br><span class="line"></span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line"></span><br><span class="line">    get_response()</span><br></pre></td></tr></table></figure>
+<ul>
+<li>关于编码模式</li>
+</ul>
+<blockquote>
+<p><strong>text</strong>  由官方文档介绍,可以理解为:根据HTTP头部请求的编码模式,智能对服务器的内容进行编码.</p>
+<p><strong>content</strong> 可以理解为:以字节的方式请求数据流,然后自己自定义编码数据字节内容.</p>
+</blockquote>
+<ul>
+<li>关于参数,下面我自己列出来几个比较常用的参数</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参数</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">url</td>
+<td style="text-align:center">str</td>
+<td style="text-align:center">url地址</td>
+</tr>
+<tr>
+<td style="text-align:center">data</td>
+<td style="text-align:center">dict,str</td>
+<td style="text-align:center">请求数据</td>
+</tr>
+<tr>
+<td style="text-align:center">allow_redirects</td>
+<td style="text-align:center">True</td>
+<td style="text-align:center">定义重定向</td>
+</tr>
+<tr>
+<td style="text-align:center">headers</td>
+<td style="text-align:center">dict</td>
+<td style="text-align:center">自定义请求头</td>
+</tr>
+<tr>
+<td style="text-align:center">params</td>
+<td style="text-align:center">dict</td>
+<td style="text-align:center">请求参数字典类型</td>
+</tr>
+<tr>
+<td style="text-align:center">timeout</td>
+<td style="text-align:center">float</td>
+<td style="text-align:center">设定服务器响应时间</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li>更多具体高级用法可以参考<a href="https://requests.kennethreitz.org//zh_CN/latest/index.html" target="_blank" rel="noopener"><strong>官方文档</strong></a></li>
+</ul>
+<h3 id="解析器"><a href="#解析器" class="headerlink" title="解析器"></a>解析器</h3><ul>
+<li><p>关于解析器,其实大部分来说是前端的基本内容,比如网页的嵌套等,直接来说就是剔除没有用的数据,获取自己想要的数据.</p>
+</li>
+<li><p>解析器其实就是对文本内容进行增减删改操作,按照自己定义的规则解析内容,小型解析可以直接用正则表达式直接上,我刚开始的时候也是直接正则提取,因为<strong>beautifulsoup</strong>,和<strong>xpath</strong>框架使用的规则比较繁琐,对于初级者来说,也许还要基本了解以下前端网页的节点关系,但是再过段时间,<strong>xpath</strong>等框架确实比正则便捷多了,直接构造规则,而且稳定性比正则好,因为节点不容易改变,而内容可以变化.</p>
+</li>
+</ul>
+<h3 id="储存器"><a href="#储存器" class="headerlink" title="储存器"></a>储存器</h3><ul>
+<li>顾名思义,就是把数据给储存到文件或者数据库中,小型的文件就直接保存文件,大型的数据可以储存到数据库中,其中<strong>pymyspl</strong>和<strong>pymongo</strong>库直接和<strong>myspl</strong>,<strong>mongo</strong>数据库建立联系,便于调用储存,包装为库后,只需要端口和用户密码即可储存数据,大大提高了工作效率.</li>
+</ul>
+<h4 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h4><ul>
+<li>作为初学者,我们可以了解为什么爬虫的结构要分成这样,因为后期爬虫框架已经非常成熟,例如强大的<a href="https://scrapy.org/" target="_blank" rel="noopener"><strong>scrapy</strong></a>框架直接封装爬虫结构,只需要在设置填写几个参数,设置优先级以及构造爬写规则,它就可以自动爬取数据了,但是至于它是如何实现这些功能的,这就需要我们在初级时候通过分部学习爬虫的结构和基本理解爬虫原理,只有如此,我们才能更好的使用框架来进行数据爬取.</li>
+</ul>
 
     </div>
 
@@ -385,9 +427,9 @@
           
           <div class="post-tags">
             
-              <a href="/tags/Linux/" rel="tag"<i class="fa fa-tag"></i>># Linux</a>
-            
               <a href="/tags/Python/" rel="tag"<i class="fa fa-tag"></i>># Python</a>
+            
+              <a href="/tags/Python-Spider/" rel="tag"<i class="fa fa-tag"></i>># Python-Spider</a>
             
           </div>
         
@@ -397,8 +439,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/03/16/Linux常用命令二/" rel="next" title="Linux常用命令二">
-                  <i class="fa fa-chevron-left"></i> Linux常用命令二
+                <a href="/2019/09/29/Linux常用命令四/" rel="next" title="Linux常用命令四">
+                  <i class="fa fa-chevron-left"></i> Linux常用命令四
                 </a>
               
             </div>
@@ -406,10 +448,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/09/25/翻译小助手/" rel="prev" title="翻译小助手">
-                  翻译小助手 <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -458,7 +496,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装Python3"><span class="nav-number">1.</span> <span class="nav-text">安装Python3</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#原因"><span class="nav-number">1.1.</span> <span class="nav-text">原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#过程"><span class="nav-number">1.2.</span> <span class="nav-text">过程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#先安装python依赖库以及扩展包"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">先安装python依赖库以及扩展包</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解压python包"><span class="nav-number">1.2.1.</span> <span class="nav-text">解压python包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加配置"><span class="nav-number">1.2.2.</span> <span class="nav-text">添加配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编译和执行源码"><span class="nav-number">1.2.3.</span> <span class="nav-text">编译和执行源码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#建立软链"><span class="nav-number">1.2.4.</span> <span class="nav-text">建立软链</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决yum源出错问题"><span class="nav-number">1.2.5.</span> <span class="nav-text">解决yum源出错问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试pip"><span class="nav-number">1.2.6.</span> <span class="nav-text">测试pip</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pip测试成功-更换版本完成"><span class="nav-number">1.2.7.</span> <span class="nav-text">pip测试成功,更换版本完成</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Python-爬虫入门二"><span class="nav-number">1.</span> <span class="nav-text">Python 爬虫入门二</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#爬虫的基本结构"><span class="nav-number">1.0.1.</span> <span class="nav-text">爬虫的基本结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#请求器初级"><span class="nav-number">1.0.1.1.</span> <span class="nav-text">请求器初级</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解析器"><span class="nav-number">1.0.2.</span> <span class="nav-text">解析器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#储存器"><span class="nav-number">1.0.3.</span> <span class="nav-text">储存器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#后续"><span class="nav-number">1.0.3.1.</span> <span class="nav-text">后续</span></a></li></ol></li></ol></li></ol></li></ol></div>
         
       </div>
       <!--/noindex-->
