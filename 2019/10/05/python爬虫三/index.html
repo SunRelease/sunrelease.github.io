@@ -74,19 +74,19 @@
   };
 </script>
 
-  <meta name="description" content="Python 爬虫入门二爬虫的基本结构 对于爬虫来说,基本结构可以分解为:请求,解析,储存,然后再这三大步骤中在进行细分:调度器,储存队列优先级等对请求对象,数据库储存对象等,下面仅仅是简单的介绍应用而已. 请求器初级 大家都知道,我们的日常上网行为都是在浏览器上进行的,也许有人清楚地知道网络行为,实际上我们在浏览每一个网页时候,都会向服务器进行request后,服务器就会define reque">
+  <meta name="description" content="python爬虫之re解析库(一) 这次主要解释爬虫的解析器的部分用法,解析数据确实是爬虫中的重要一环,请求数据之后,便是要找到我们想要的数据,也可以这么认为这是过滤环节,去除无用的信息,并获取自己想要的数据,其实有点类似于字符串的处理,这里主要简单说明一下re库的基本操作">
 <meta name="keywords" content="Python,Python-Spider">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python爬虫二">
-<meta property="og:url" content="http://yoursite.com/2019/09/29/python爬虫二/index.html">
+<meta property="og:title" content="python爬虫三">
+<meta property="og:url" content="http://yoursite.com/2019/10/05/python爬虫三/index.html">
 <meta property="og:site_name" content="SunRelease">
-<meta property="og:description" content="Python 爬虫入门二爬虫的基本结构 对于爬虫来说,基本结构可以分解为:请求,解析,储存,然后再这三大步骤中在进行细分:调度器,储存队列优先级等对请求对象,数据库储存对象等,下面仅仅是简单的介绍应用而已. 请求器初级 大家都知道,我们的日常上网行为都是在浏览器上进行的,也许有人清楚地知道网络行为,实际上我们在浏览每一个网页时候,都会向服务器进行request后,服务器就会define reque">
+<meta property="og:description" content="python爬虫之re解析库(一) 这次主要解释爬虫的解析器的部分用法,解析数据确实是爬虫中的重要一环,请求数据之后,便是要找到我们想要的数据,也可以这么认为这是过滤环节,去除无用的信息,并获取自己想要的数据,其实有点类似于字符串的处理,这里主要简单说明一下re库的基本操作">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-02T14:19:51.414Z">
+<meta property="og:updated_time" content="2019-10-14T12:30:36.004Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python爬虫二">
-<meta name="twitter:description" content="Python 爬虫入门二爬虫的基本结构 对于爬虫来说,基本结构可以分解为:请求,解析,储存,然后再这三大步骤中在进行细分:调度器,储存队列优先级等对请求对象,数据库储存对象等,下面仅仅是简单的介绍应用而已. 请求器初级 大家都知道,我们的日常上网行为都是在浏览器上进行的,也许有人清楚地知道网络行为,实际上我们在浏览每一个网页时候,都会向服务器进行request后,服务器就会define reque">
-  <link rel="canonical" href="http://yoursite.com/2019/09/29/python爬虫二/">
+<meta name="twitter:title" content="python爬虫三">
+<meta name="twitter:description" content="python爬虫之re解析库(一) 这次主要解释爬虫的解析器的部分用法,解析数据确实是爬虫中的重要一环,请求数据之后,便是要找到我们想要的数据,也可以这么认为这是过滤环节,去除无用的信息,并获取自己想要的数据,其实有点类似于字符串的处理,这里主要简单说明一下re库的基本操作">
+  <link rel="canonical" href="http://yoursite.com/2019/10/05/python爬虫三/">
 
 
 <script id="page-configurations">
@@ -100,7 +100,7 @@
   };
 </script>
 
-  <title>python爬虫二 | SunRelease</title>
+  <title>python爬虫三 | SunRelease</title>
   
 
 
@@ -241,7 +241,7 @@
   
   
   <div class="post-block post">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/29/python爬虫二/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/05/python爬虫三/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="SunRelease">
@@ -253,7 +253,7 @@
       <meta itemprop="name" content="SunRelease">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">python爬虫二
+        <h1 class="post-title" itemprop="name headline">python爬虫三
 
           
         </h1>
@@ -269,7 +269,7 @@
                 
               
 
-              <time title="创建时间：2019-09-29 23:47:32" itemprop="dateCreated datePublished" datetime="2019-09-29T23:47:32+08:00">2019-09-29</time>
+              <time title="创建时间：2019-10-05 18:56:55" itemprop="dateCreated datePublished" datetime="2019-10-05T18:56:55+08:00">2019-10-05</time>
             </span>
           
             
@@ -280,7 +280,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-02 22:19:51" itemprop="dateModified" datetime="2019-10-02T22:19:51+08:00">2019-10-02</time>
+                <time title="修改时间：2019-10-14 20:30:36" itemprop="dateModified" datetime="2019-10-14T20:30:36+08:00">2019-10-14</time>
               </span>
             
           
@@ -317,91 +317,267 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Python-爬虫入门二"><a href="#Python-爬虫入门二" class="headerlink" title="Python 爬虫入门二"></a>Python 爬虫入门二</h1><h3 id="爬虫的基本结构"><a href="#爬虫的基本结构" class="headerlink" title="爬虫的基本结构"></a>爬虫的基本结构</h3><ul>
-<li>对于爬虫来说,基本结构可以分解为:<strong>请求</strong>,<strong>解析</strong>,<strong>储存</strong>,然后再这三大步骤中在进行细分:调度器,储存队列优先级等对请求对象,数据库储存对象等,下面仅仅是简单的介绍应用而已.</li>
-</ul><h4 id="请求器初级"><a href="#请求器初级" class="headerlink" title="请求器初级"></a>请求器初级</h4><ul>
-<li>大家都知道,我们的日常上网行为都是在浏览器上进行的,也许有人清楚地知道网络行为,实际上我们在浏览每一个网页时候,都会向服务器进行request后,服务器就会define request,然后发送response给客户端,客户端再进行确认后,渲染到浏览器上,其中用户交互时,会不断的get,post数据data到服务器,数据再实现相应的回应请求,这样基本就实现了请求功能.</li>
-</ul><a id="more"></a>
-
-<ul>
-<li>为什么用python进行爬虫研究呢,主要是python开发时间短,而且第三方库引进可以大大减少造轮子的时间,大部分请求的工作可以直接引用k神的requests这个package就可以实现基本的请求功能了.</li>
+        <h3 id="python爬虫之re解析库-一"><a href="#python爬虫之re解析库-一" class="headerlink" title="python爬虫之re解析库(一)"></a>python爬虫之re解析库(一)</h3><ul>
+<li>这次主要解释爬虫的解析器的部分用法,解析数据确实是爬虫中的重要一环,请求数据之后,便是要找到我们想要的数据,也可以这么认为这是过滤环节,去除无用的信息,并获取自己想要的数据,其实有点类似于字符串的处理,这里主要简单说明一下re库的基本操作</li>
 </ul>
-<ul>
-<li>首先安装该库</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install requests</span><br></pre></td></tr></table></figure>
-<ul>
-<li>对网址进行请求</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># -*- coding : utf-8 -*-</span><br><span class="line"></span><br><span class="line">def get_response():</span><br><span class="line"></span><br><span class="line">    url=&apos;www.baidu.com&apos;</span><br><span class="line"></span><br><span class="line">    response=requests.get(url=url)                  #请求数据</span><br><span class="line"></span><br><span class="line">    if response.status_code==200:</span><br><span class="line"></span><br><span class="line">        res1=response.text                          #编码response</span><br><span class="line"></span><br><span class="line">        res2=response.content.decode(&apos;utf-8&apos;)       #编码response</span><br><span class="line"></span><br><span class="line">    else:</span><br><span class="line"></span><br><span class="line">        print(&quot;requests fail&quot;)</span><br><span class="line"></span><br><span class="line">        pass</span><br><span class="line"></span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line"></span><br><span class="line">    get_response()</span><br></pre></td></tr></table></figure>
-<ul>
-<li>关于编码模式</li>
-</ul>
-<blockquote>
-<p><strong>text</strong>  由官方文档介绍,可以理解为:根据HTTP头部请求的编码模式,智能对服务器的内容进行编码.</p>
-<p><strong>content</strong> 可以理解为:以字节的方式请求数据流,然后自己自定义编码数据字节内容.</p>
-</blockquote>
-<ul>
-<li>关于参数,下面我自己列出来几个比较常用的参数</li>
+<a id="more"></a>
+<h4 id="re库"><a href="#re库" class="headerlink" title="re库"></a>re库</h4><ul>
+<li>python中自带的字符串处理库</li>
 </ul>
 <div class="table-container">
 <table>
 <thead>
 <tr>
-<th style="text-align:center">参数</th>
-<th style="text-align:center">类型</th>
-<th style="text-align:center">例子</th>
+<th style="text-align:center">优缺点</th>
+<th style="text-align:center">评价</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center">url</td>
-<td style="text-align:center">str</td>
-<td style="text-align:center">url地址</td>
+<td style="text-align:center">优点</td>
+<td style="text-align:center">自带官方库,对于大部分的字符串的处理都能游刃有余,处理小量数据没有问题,速度快</td>
 </tr>
 <tr>
-<td style="text-align:center">data</td>
-<td style="text-align:center">dict,str</td>
-<td style="text-align:center">请求数据</td>
-</tr>
-<tr>
-<td style="text-align:center">allow_redirects</td>
-<td style="text-align:center">True</td>
-<td style="text-align:center">定义重定向</td>
-</tr>
-<tr>
-<td style="text-align:center">headers</td>
-<td style="text-align:center">dict</td>
-<td style="text-align:center">自定义请求头</td>
-</tr>
-<tr>
-<td style="text-align:center">params</td>
-<td style="text-align:center">dict</td>
-<td style="text-align:center">请求参数字典类型</td>
-</tr>
-<tr>
-<td style="text-align:center">timeout</td>
-<td style="text-align:center">float</td>
-<td style="text-align:center">设定服务器响应时间</td>
+<td style="text-align:center">缺点</td>
+<td style="text-align:center">需要制定比较繁琐的规则,不能保持爬虫的时效性,规则需要频繁改写</td>
 </tr>
 </tbody>
 </table>
 </div>
 <ul>
-<li>更多具体高级用法可以参考<a href="https://requests.kennethreitz.org//zh_CN/latest/index.html" target="_blank" rel="noopener"><strong>官方文档</strong></a></li>
+<li><a href="https://github.com/SunRelease/Spider_crawler/blob/master/Html_parse/Get_proxies.py" target="_blank" rel="noopener">实例代码</a></li>
 </ul>
-<h3 id="解析器"><a href="#解析器" class="headerlink" title="解析器"></a>解析器</h3><ul>
-<li><p>关于解析器,其实大部分来说是前端的基本内容,比如网页的嵌套等,直接来说就是剔除没有用的数据,获取自己想要的数据.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">import re</span><br><span class="line"></span><br><span class="line">def parse():</span><br><span class="line"></span><br><span class="line">    pattern=re.compile(&apos;.*?&lt;br /&gt;(.*?)#.*?&lt;br /&gt;&apos;,re.S)</span><br><span class="line">    #re.S表示换行匹配,不受行数限制,python常用pattern来封装表达式规则,极大方便了调用</span><br><span class="line"></span><br><span class="line">    result=re.findall(pattern,datas)</span><br><span class="line">    #表示寻找Html里面的所有匹配规则的字符串</span><br><span class="line"></span><br><span class="line">    print(type(result))</span><br><span class="line">    #打印值返回型</span><br><span class="line">    for results in result:</span><br><span class="line">    #列表的遍历</span><br><span class="line">            with open (&quot;ip.txt&quot;,&quot;a&quot;,encoding=&quot;utf-8&quot;) as f:</span><br><span class="line">    #将结果保存到列表中.以text的格式</span><br><span class="line">                    f.write(&quot;&#123;&#125;\n&quot;.format(results))</span><br><span class="line">    print(&quot;Download successfully!&quot;)</span><br><span class="line">    </span><br><span class="line">    return None</span><br></pre></td></tr></table></figure>
+<ul>
+<li>这里面使用了re.findall对整个文本进行处理,关于re库的具体使用方法,可以到<a href="https://docs.python.org/zh-cn/3/library/re.html" target="_blank" rel="noopener">网上阅读</a>.这里我列出我使用的几种用法:</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数方法</th>
+<th style="text-align:center">参数</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">re.sub</td>
+<td style="text-align:center">(pattern,replace-strings,strings,flags)</td>
+<td style="text-align:center">字符串的替换</td>
+</tr>
+<tr>
+<td style="text-align:center">re.compile</td>
+<td style="text-align:center">(flags)</td>
+<td style="text-align:center">封装过滤规则,返回封装对象<strong>patttern</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">re.search</td>
+<td style="text-align:center">(pattern,strings,flags)</td>
+<td style="text-align:center">搜索<strong>整个字符串</strong>,并返回匹配到的<strong>第一个</strong>结果</td>
+</tr>
+<tr>
+<td style="text-align:center">re.match</td>
+<td style="text-align:center">(pattern,strings,flags)</td>
+<td style="text-align:center">从<strong>字符串开始</strong>进行搜索,规则要从第一个字符开始,否则返回None</td>
+</tr>
+<tr>
+<td style="text-align:center">re.findall</td>
+<td style="text-align:center">(pattern,strings,flags)</td>
+<td style="text-align:center">搜索<strong>整个字符串</strong>,并返回<strong>所有符合匹配的结果</strong>的一个<strong>列表</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">re.finditer</td>
+<td style="text-align:center">(pattern,strings,flags)</td>
+<td style="text-align:center">与上面的findall的用法一样,但是返回一个<strong>迭代器</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<ul>
+<li>flags-正则表达式修饰符,可以复合使用:option1|option2</li>
+</ul>
+</blockquote>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参数</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">re.I</td>
+<td style="text-align:center">使匹配字符对大小写不敏感</td>
+</tr>
+<tr>
+<td style="text-align:center">re.S</td>
+<td style="text-align:center">匹配换行符在内的字符</td>
+</tr>
+<tr>
+<td style="text-align:center">re.U</td>
+<td style="text-align:center">根据unicode匹配字符</td>
+</tr>
+<tr>
+<td style="text-align:center">re.X</td>
+<td style="text-align:center">是匹配规则更加容易理解</td>
+</tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<ul>
+<li><p>pattern 匹配规则,对于学习过其他语言的re库来说,其实匹配规则都是大同小异的,只是使用方法略微不同了</p>
 </li>
-<li><p>解析器其实就是对文本内容进行增减删改操作,按照自己定义的规则解析内容,小型解析可以直接用正则表达式直接上,我刚开始的时候也是直接正则提取,因为<strong>beautifulsoup</strong>,和<strong>xpath</strong>框架使用的规则比较繁琐,对于初级者来说,也许还要基本了解以下前端网页的节点关系,但是再过段时间,<strong>xpath</strong>等框架确实比正则便捷多了,直接构造规则,而且稳定性比正则好,因为节点不容易改变,而内容可以变化.</p>
+<li><p>常用元字符</p>
 </li>
 </ul>
-<h3 id="储存器"><a href="#储存器" class="headerlink" title="储存器"></a>储存器</h3><ul>
-<li>顾名思义,就是把数据给储存到文件或者数据库中,小型的文件就直接保存文件,大型的数据可以储存到数据库中,其中<strong>pymyspl</strong>和<strong>pymongo</strong>库直接和<strong>myspl</strong>,<strong>mongo</strong>数据库建立联系,便于调用储存,包装为库后,只需要端口和用户密码即可储存数据,大大提高了工作效率.</li>
+</blockquote>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参数</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">\d</td>
+<td style="text-align:center">匹配数字</td>
+</tr>
+<tr>
+<td style="text-align:center">\s</td>
+<td style="text-align:center">匹配空白符</td>
+</tr>
+<tr>
+<td style="text-align:center">^</td>
+<td style="text-align:center">匹配字符串的开始</td>
+</tr>
+<tr>
+<td style="text-align:center">$</td>
+<td style="text-align:center">匹配字符串的结束</td>
+</tr>
+<tr>
+<td style="text-align:center">\b</td>
+<td style="text-align:center">匹配单词的开始或结束</td>
+</tr>
+<tr>
+<td style="text-align:center">.</td>
+<td style="text-align:center">匹配除换行符以外的字符</td>
+</tr>
+<tr>
+<td style="text-align:center">\w</td>
+<td style="text-align:center">匹配字母或数字或下划线或汉字</td>
+</tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<ul>
+<li>常用限定符</li>
 </ul>
-<h4 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h4><ul>
-<li>作为初学者,我们可以了解为什么爬虫的结构要分成这样,因为后期爬虫框架已经非常成熟,例如强大的<a href="https://scrapy.org/" target="_blank" rel="noopener"><strong>scrapy</strong></a>框架直接封装爬虫结构,只需要在设置填写几个参数,设置优先级以及构造爬写规则,它就可以自动爬取数据了,但是至于它是如何实现这些功能的,这就需要我们在初级时候通过分部学习爬虫的结构和基本理解爬虫原理,只有如此,我们才能更好的使用框架来进行数据爬取.</li>
+</blockquote>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参数</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">?</td>
+<td style="text-align:center">重复零次或一次</td>
+</tr>
+<tr>
+<td style="text-align:center">+</td>
+<td style="text-align:center">重复一次或更多次</td>
+</tr>
+<tr>
+<td style="text-align:center">*</td>
+<td style="text-align:center">重复零次或者更多次</td>
+</tr>
+<tr>
+<td style="text-align:center">\d{m,n}</td>
+<td style="text-align:center">重复m次到n次</td>
+</tr>
+<tr>
+<td style="text-align:center">\d{n}</td>
+<td style="text-align:center">重复匹配数字n次</td>
+</tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<ul>
+<li>懒惰限定符,顾名思义,就是为了简明繁琐的规则而诞生的限定符</li>
 </ul>
+</blockquote>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参数</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">??</td>
+<td style="text-align:center">重复0次到1次</td>
+</tr>
+<tr>
+<td style="text-align:center">.*?</td>
+<td style="text-align:center">重复任意次,<strong>少重复</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">*?</td>
+<td style="text-align:center">重复任意次直至匹配不出来,<strong>多重复</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li><strong>(.*?)</strong>代表匹配尽可能少的字符,无论字母还是数字,比如某些url地址等,直接来个如下代码</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">pattern = re.compile(r&apos;.*?&lt;br /&gt;(.*?)#.*?&lt;br /&gt;&apos;,re.S)</span><br><span class="line"></span><br><span class="line">res = re.findall(pattern,htmls)</span><br></pre></td></tr></table></figure>
+<hr>
+<ul>
+<li>零宽断言,是一种零宽度匹配的,不会保存在匹配结果中,仅仅是代表一个位置.</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">代码</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">?=</td>
+<td style="text-align:center">零宽度正预测先行断言,<strong>即确定后面位置</strong>,前接匹配规则</td>
+</tr>
+<tr>
+<td style="text-align:center">?&lt;=</td>
+<td style="text-align:center">零宽度正回顾后发断言,<strong>即确定前面位置</strong>,后接匹配规则</td>
+</tr>
+<tr>
+<td style="text-align:center">?!</td>
+<td style="text-align:center">零宽度负预测先行断言,<strong>否定后面的位置</strong>,在执行前接规则</td>
+</tr>
+<tr>
+<td style="text-align:center">?&lt;!</td>
+<td style="text-align:center">零宽度负回顾后发断言,<strong>否定前面的位置</strong>,再执行后接规则</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">import re</span><br><span class="line"></span><br><span class="line">strings=&apos;个人邮箱是:x789236@qmail.com,个人信用代码是:4456897Q,个人名称是:rester&apos;</span><br><span class="line"></span><br><span class="line">#确定后面的位置是个人信用</span><br><span class="line">res1=re.findall(r&quot;个人邮箱是:(.*?)(?=,个人信用)&quot;,strings)</span><br><span class="line">print(res1)</span><br><span class="line"></span><br><span class="line">#确定前面的位置是代码</span><br><span class="line">res2=re.findall(r&quot;(?&lt;=代码是:)(.*?)(?=,)&quot;,strings)</span><br><span class="line">print(res2)</span><br><span class="line"></span><br><span class="line">#否定后面位置是个人名称,而是个人信用</span><br><span class="line">res3=re.findall(r&apos;个人邮箱是:(.*?)(?!,个人名称是)(?=,个人信用)&apos;,strings)</span><br><span class="line">print(res3)</span><br><span class="line"></span><br><span class="line">#否定前面是后缀cn,确定是.com</span><br><span class="line">res4=re.findall(r&apos;(?&lt;!.cn,)(?&lt;=.com,)(.*?)(?=,个人名称是)&apos;,strings)</span><br><span class="line">print(res4)</span><br><span class="line"></span><br><span class="line">运行结果:</span><br><span class="line">[&apos;x789236@qmail.com&apos;]</span><br><span class="line">[&apos;4456897Q&apos;]</span><br><span class="line">[&apos;x789236@qmail.com&apos;]</span><br><span class="line">[&apos;个人信用代码是:4456897Q&apos;]</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -439,8 +615,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/09/29/Linux常用命令四/" rel="next" title="Linux常用命令四">
-                  <i class="fa fa-chevron-left"></i> Linux常用命令四
+                <a href="/2019/09/29/python爬虫二/" rel="next" title="python爬虫二">
+                  <i class="fa fa-chevron-left"></i> python爬虫二
                 </a>
               
             </div>
@@ -448,10 +624,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/10/05/python爬虫三/" rel="prev" title="python爬虫三">
-                  python爬虫三 <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -500,7 +672,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Python-爬虫入门二"><span class="nav-number">1.</span> <span class="nav-text">Python 爬虫入门二</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#爬虫的基本结构"><span class="nav-number">1.0.1.</span> <span class="nav-text">爬虫的基本结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#请求器初级"><span class="nav-number">1.0.1.1.</span> <span class="nav-text">请求器初级</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解析器"><span class="nav-number">1.0.2.</span> <span class="nav-text">解析器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#储存器"><span class="nav-number">1.0.3.</span> <span class="nav-text">储存器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#后续"><span class="nav-number">1.0.3.1.</span> <span class="nav-text">后续</span></a></li></ol></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#python爬虫之re解析库-一"><span class="nav-number">1.</span> <span class="nav-text">python爬虫之re解析库(一)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#re库"><span class="nav-number">1.1.</span> <span class="nav-text">re库</span></a></li></ol></li></ol></div>
         
       </div>
       <!--/noindex-->
