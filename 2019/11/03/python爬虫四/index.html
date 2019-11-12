@@ -97,7 +97,7 @@
 <meta property="og:image" content="https://upload.cc/i1/2019/11/08/hnZdWB.jpg">
 <meta property="og:image" content="https://upload.cc/i1/2019/11/08/6vapYo.jpg">
 <meta property="og:image" content="https://upload.cc/i1/2019/11/08/SgPs3r.jpg">
-<meta property="og:updated_time" content="2019-11-08T08:33:34.659Z">
+<meta property="og:updated_time" content="2019-11-12T15:09:57.673Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python爬虫四">
 <meta name="twitter:description" content="python 爬虫四之静动态网页 爬虫最重要的就是如何请求自己想要的数据,但是数据并不是凭空产生的,而且在这个数据隐私利益上升的时代,爬虫与反爬虫的斗争逐渐升级到另外一个高度,这时突破反爬虫机制成了爬虫的难点.">
@@ -296,7 +296,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-11-08 16:33:34" itemprop="dateModified" datetime="2019-11-08T16:33:34+08:00">2019-11-08</time>
+                <time title="修改时间：2019-11-12 23:09:57" itemprop="dateModified" datetime="2019-11-12T23:09:57+08:00">2019-11-12</time>
               </span>
             
           
@@ -363,7 +363,7 @@
 </tbody>
 </table>
 </div>
-<h4 id="静态界面"><a href="#静态界面" class="headerlink" title="静态界面"></a>静态界面</h4><ul>
+<h4 id="静态界面"><a href="#静态界面" class="headerlink" title="静态界面"></a><a href>静态界面</a></h4><ul>
 <li>最初的大多数网站都是静态网址,除了提交表单,账户密码的需要请求后端时,基本的信息数据都在该网页里,所以只需要<code>get html</code>,再加以文本处理就能简单的获取到自己想要的数据,然而现在大部分网页已经摒弃了这种用法,基本上的网页都是一个空框架,然后各种嵌入引用js文件进行渲染交互,优点是使网页更加美观,功能性更强,缺点就是数据的获取日益困难,各种加密阻碍了获取数据的道路.</li>
 </ul>
 <h5 id="单一数据获取方式-一个库就可以解决获取问题"><a href="#单一数据获取方式-一个库就可以解决获取问题" class="headerlink" title="单一数据获取方式:一个库就可以解决获取问题"></a>单一数据获取方式:一个库就可以解决获取问题</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_response</span><span class="params">(url)</span>:</span></span><br><span class="line"></span><br><span class="line">    response = requests.get(url)</span><br><span class="line"></span><br><span class="line">    print(response.content.decode(<span class="string">'utf-8'</span>))</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ ==<span class="string">'__main__'</span>:</span><br><span class="line"></span><br><span class="line">    url=input(<span class="string">"地址:"</span>)</span><br><span class="line">    get_response(url)</span><br></pre></td></tr></table></figure>
@@ -385,7 +385,7 @@
 </ul>
 <p><img src="https://upload.cc/i1/2019/11/07/OoykAV.jpg" alt="20191107232509"></p>
 <p><img src="https://upload.cc/i1/2019/11/07/yrfGLA.jpg" alt="20191107233520"></p>
-<h4 id="动态网页"><a href="#动态网页" class="headerlink" title="动态网页"></a>动态网页</h4><h5 id="关于动态-其实也可以理解为异步加载-可以理解为数据和网页是分开的-现在网页上最常用的交互模式"><a href="#关于动态-其实也可以理解为异步加载-可以理解为数据和网页是分开的-现在网页上最常用的交互模式" class="headerlink" title="关于动态,其实也可以理解为异步加载,可以理解为数据和网页是分开的,现在网页上最常用的交互模式."></a>关于动态,其实也可以理解为<a href="https://baike.baidu.com/item/AJAX/8425" target="_blank" rel="noopener">异步加载</a>,可以理解为数据和网页是分开的,现在网页上最常用的交互模式.</h5><ul>
+<h4 id="动态网页"><a href="#动态网页" class="headerlink" title="动态网页"></a><a href>动态网页</a></h4><h5 id="关于动态-其实也可以理解为异步加载-可以理解为数据和网页是分开的-现在网页上最常用的交互模式"><a href="#关于动态-其实也可以理解为异步加载-可以理解为数据和网页是分开的-现在网页上最常用的交互模式" class="headerlink" title="关于动态,其实也可以理解为异步加载,可以理解为数据和网页是分开的,现在网页上最常用的交互模式."></a>关于动态,其实也可以理解为<a href="https://baike.baidu.com/item/AJAX/8425" target="_blank" rel="noopener">异步加载</a>,可以理解为数据和网页是分开的,现在网页上最常用的交互模式.</h5><ul>
 <li><p>最常用的模式:<code>js加密</code>,可以对<code>js</code>生成参数的函数进行加密,混淆,以达到无法推测参数生成的目的,比如下面一个比较简单的例子.</p>
 </li>
 <li><p>该<code>data</code>中传入了一个奇怪的参数<code>random</code>,推测是<code>js</code>生成的,经过一番搜索得到了一个<code>ajax</code>请求</p>
