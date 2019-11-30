@@ -74,26 +74,29 @@
   };
 </script>
 
-  <meta name="description" content="常用命令之查询查看系统负载数 关于这个负载数,说句笑话,如果这个数超过5,就会睡不着觉了…,肯定是系统过载了,得想方法解决,否则严重会导致系统崩溃,例如新闻就报道了谷歌和Facebook在今年的3月15号发生一定规模的宕机,谷歌宣布是缓存导致错误发生,服务器过载,Facebook虽然还没有公布结果,但是与之前的ddos攻击可能也分不清关系,DDOS(分布式攻击)会导致服务器负载增加,可能飙到几千也">
-<meta name="keywords" content="Linux">
+  <meta name="description" content="这次分享的是关于某代理IP网站爬取所遇到的问题 这网站是用国外服务器的网站,需要科学上网才能获取到数据,这里直接上分析:">
+<meta name="keywords" content="Python,Python-Spider">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux常用命令二">
-<meta property="og:url" content="http://yoursite.com/2019/03/16/Linux常用命令二/index.html">
+<meta property="og:title" content="python爬虫六">
+<meta property="og:url" content="http://yoursite.com/2019/12/01/python爬虫六/index.html">
 <meta property="og:site_name" content="SunRelease">
-<meta property="og:description" content="常用命令之查询查看系统负载数 关于这个负载数,说句笑话,如果这个数超过5,就会睡不着觉了…,肯定是系统过载了,得想方法解决,否则严重会导致系统崩溃,例如新闻就报道了谷歌和Facebook在今年的3月15号发生一定规模的宕机,谷歌宣布是缓存导致错误发生,服务器过载,Facebook虽然还没有公布结果,但是与之前的ddos攻击可能也分不清关系,DDOS(分布式攻击)会导致服务器负载增加,可能飙到几千也">
+<meta property="og:description" content="这次分享的是关于某代理IP网站爬取所遇到的问题 这网站是用国外服务器的网站,需要科学上网才能获取到数据,这里直接上分析:">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://s2.ax1x.com/2019/09/27/uKRoIs.gif">
-<meta property="og:image" content="https://s2.ax1x.com/2019/09/27/uKR7in.gif">
-<meta property="og:image" content="https://s2.ax1x.com/2019/09/27/uKR5ZQ.gif">
-<meta property="og:image" content="https://s2.ax1x.com/2019/09/27/uKRhqg.gif">
-<meta property="og:image" content="https://s2.ax1x.com/2019/09/27/uKRIaj.gif">
-<meta property="og:image" content="https://s2.ax1x.com/2019/09/27/uKqePO.gif">
-<meta property="og:updated_time" content="2019-09-27T13:09:43.931Z">
+<meta property="og:image" content="https://upload.cc/i1/2019/11/30/JDSP7z.jpg">
+<meta property="og:image" content="https://upload.cc/i1/2019/11/30/auTmc9.jpg">
+<meta property="og:image" content="https://upload.cc/i1/2019/12/01/prJGXb.jpg">
+<meta property="og:image" content="https://upload.cc/i1/2019/12/01/imguNa.jpg">
+<meta property="og:image" content="https://upload.cc/i1/2019/12/01/imguNa.jpg">
+<meta property="og:image" content="https://upload.cc/i1/2019/12/01/xhDEpa.jpg">
+<meta property="og:image" content="https://upload.cc/i1/2019/12/01/r1B2Nu.jpg">
+<meta property="og:image" content="https://upload.cc/i1/2019/12/01/feAYDy.jpg">
+<meta property="og:image" content="https://upload.cc/i1/2019/12/01/UwigIa.jpg">
+<meta property="og:updated_time" content="2019-11-30T16:32:53.751Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux常用命令二">
-<meta name="twitter:description" content="常用命令之查询查看系统负载数 关于这个负载数,说句笑话,如果这个数超过5,就会睡不着觉了…,肯定是系统过载了,得想方法解决,否则严重会导致系统崩溃,例如新闻就报道了谷歌和Facebook在今年的3月15号发生一定规模的宕机,谷歌宣布是缓存导致错误发生,服务器过载,Facebook虽然还没有公布结果,但是与之前的ddos攻击可能也分不清关系,DDOS(分布式攻击)会导致服务器负载增加,可能飙到几千也">
-<meta name="twitter:image" content="https://s2.ax1x.com/2019/09/27/uKRoIs.gif">
-  <link rel="canonical" href="http://yoursite.com/2019/03/16/Linux常用命令二/">
+<meta name="twitter:title" content="python爬虫六">
+<meta name="twitter:description" content="这次分享的是关于某代理IP网站爬取所遇到的问题 这网站是用国外服务器的网站,需要科学上网才能获取到数据,这里直接上分析:">
+<meta name="twitter:image" content="https://upload.cc/i1/2019/11/30/JDSP7z.jpg">
+  <link rel="canonical" href="http://yoursite.com/2019/12/01/python爬虫六/">
 
 
 <script id="page-configurations">
@@ -107,7 +110,7 @@
   };
 </script>
 
-  <title>Linux常用命令二 | SunRelease</title>
+  <title>python爬虫六 | SunRelease</title>
   
 
 
@@ -248,7 +251,7 @@
   
   
   <div class="post-block post">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/16/Linux常用命令二/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/01/python爬虫六/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="SunRelease">
@@ -260,7 +263,7 @@
       <meta itemprop="name" content="SunRelease">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">Linux常用命令二
+        <h2 class="post-title" itemprop="name headline">python爬虫六
 
           
         </h2>
@@ -276,19 +279,11 @@
                 
               
 
-              <time title="创建时间：2019-03-16 19:04:07" itemprop="dateCreated datePublished" datetime="2019-03-16T19:04:07+08:00">2019-03-16</time>
+              <time title="创建时间：2019-12-01 00:23:34 / 修改时间：00:32:53" itemprop="dateCreated datePublished" datetime="2019-12-01T00:23:34+08:00">2019-12-01</time>
             </span>
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-09-27 21:09:43" itemprop="dateModified" datetime="2019-09-27T21:09:43+08:00">2019-09-27</time>
-              </span>
             
           
             <span class="post-meta-item">
@@ -297,7 +292,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Linux-Learn/" itemprop="url" rel="index"><span itemprop="name">Linux_Learn</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Python-Spider/" itemprop="url" rel="index"><span itemprop="name">Python-Spider</span></a></span>
 
                 
                 
@@ -324,46 +319,70 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="常用命令之查询"><a href="#常用命令之查询" class="headerlink" title="常用命令之查询"></a>常用命令之查询</h3><h4 id="查看系统负载数"><a href="#查看系统负载数" class="headerlink" title="查看系统负载数"></a>查看系统负载数</h4><ul>
-<li>关于这个负载数,说句笑话,如果这个数超过5,就会睡不着觉了…,肯定是系统过载了,得想方法解决,否则严重会导致系统崩溃,例如新闻就报道了谷歌和Facebook在今年的3月15号发生一定规模的宕机,谷歌宣布是缓存导致错误发生,服务器过载,Facebook虽然还没有公布结果,但是与之前的ddos攻击可能也分不清关系,DDOS(分布式攻击)会导致服务器负载增加,可能飙到几千也不是不可能的事.这就需要运维师的运维技巧了,如何较大的利用带宽,又不导致服务器过闸.</li>
-</ul><a id="more"></a>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">top     #强大的任务管理器,他会统计所有数据</span><br><span class="line"></span><br><span class="line">uptime  #仅仅查看负载数</span><br></pre></td></tr></table></figure>
-<p><img src="https://s2.ax1x.com/2019/09/27/uKRoIs.gif" alt="uKRoIs.gif"></p>
-<h4 id="网卡地址查询"><a href="#网卡地址查询" class="headerlink" title="网卡地址查询"></a>网卡地址查询</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ifconfig    #不同于Windows系统,它的是ifconfig而不是ipconfig</span><br><span class="line"></span><br><span class="line">ip -a  #同样可以查询ip地址</span><br></pre></td></tr></table></figure>
-<p><img src="https://s2.ax1x.com/2019/09/27/uKR7in.gif" alt="uKR7in.gif"></p>
-<h4 id="查看系统内核以及架构"><a href="#查看系统内核以及架构" class="headerlink" title="查看系统内核以及架构"></a>查看系统内核以及架构</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uname [-a]     #用于查询系统版本以及相关信息</span><br></pre></td></tr></table></figure>
-<p><img src="https://s2.ax1x.com/2019/09/27/uKR5ZQ.gif" alt="uKR5ZQ.gif"></p>
-<h4 id="查询登录用户"><a href="#查询登录用户" class="headerlink" title="查询登录用户"></a>查询登录用户</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">who         #查询登陆过本机的用户</span><br><span class="line"></span><br><span class="line">w           #查询当前在线的用户</span><br><span class="line"></span><br><span class="line">who am i    #查询该用户的权限</span><br><span class="line"></span><br><span class="line">last        #用于查询有哪些人登陆过,不过不推荐查看该内容,因为黑客都会修改该内容,不应该作为判断依据</span><br></pre></td></tr></table></figure>
-<p><img src="https://s2.ax1x.com/2019/09/27/uKRhqg.gif" alt="uKRhqg.gif"></p>
-<h4 id="查询系统历史命令"><a href="#查询系统历史命令" class="headerlink" title="查询系统历史命令"></a>查询系统历史命令</h4><ul>
-<li>意思就是之前你是用过的命令都能看到,但最多默认只是保存1000条,修改配置可以修改该数据</li>
+        <ul>
+<li><h3 id="这次分享的是关于某代理IP网站爬取所遇到的问题"><a href="#这次分享的是关于某代理IP网站爬取所遇到的问题" class="headerlink" title="这次分享的是关于某代理IP网站爬取所遇到的问题"></a>这次分享的是关于某代理IP网站爬取所遇到的问题</h3></li>
+<li><p>这网站是用国外服务器的网站,需要科学上网才能获取到数据,这里直接上分析:</p>
+</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">history[参数]</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<ul>
+<li><h5 id="从这里面看-可以轻易分析出请求构造"><a href="#从这里面看-可以轻易分析出请求构造" class="headerlink" title="从这里面看.可以轻易分析出请求构造:"></a>从这里面看.可以轻易分析出请求构造:</h5></li>
+</ul>
+<p><img src="https://upload.cc/i1/2019/11/30/JDSP7z.jpg" alt="20191130235715"></p>
+<ul>
+<li>经过请求测试,可以分离参数和说明如下:</li>
+</ul>
 <div class="table-container">
 <table>
 <thead>
 <tr>
-<th style="text-align:center">参数</th>
-<th style="text-align:center">代码</th>
+<th style="text-align:center"><code>key</code></th>
+<th style="text-align:center"><code>value</code></th>
+<th style="text-align:center">说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center">清除所有历史命令</td>
-<td style="text-align:center">-c</td>
+<td style="text-align:center"><code>page</code></td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">页数</td>
 </tr>
 <tr>
-<td style="text-align:center">执行历史命令</td>
-<td style="text-align:center">!+序列号</td>
+<td style="text-align:center"><code>limit</code></td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">页的数据多少限制</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p><img src="https://s2.ax1x.com/2019/09/27/uKRIaj.gif" alt="uKRIaj.gif"></p>
-<h4 id="显示内存使用量"><a href="#显示内存使用量" class="headerlink" title="显示内存使用量"></a>显示内存使用量</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">free [-h]   #查看当前内存使用量</span><br></pre></td></tr></table></figure>
-<p><img src="https://s2.ax1x.com/2019/09/27/uKqePO.gif" alt="uKqePO.gif"></p>
-<h4 id="收集并发送系统错误"><a href="#收集并发送系统错误" class="headerlink" title="收集并发送系统错误"></a>收集并发送系统错误</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sosreport  #打包错误并上传到技术人员,但目前好像RHEL有这个功能,centos里面没有</span><br></pre></td></tr></table></figure>
-
+<p><img src="https://upload.cc/i1/2019/11/30/auTmc9.jpg" alt="20191130235625"></p>
+<ul>
+<li><h5 id="然而直接浏览器访问时-是会出现json数据-但是当直接放在python中请求时-会出现状态码500错误"><a href="#然而直接浏览器访问时-是会出现json数据-但是当直接放在python中请求时-会出现状态码500错误" class="headerlink" title="然而直接浏览器访问时,是会出现json数据,但是当直接放在python中请求时,会出现状态码500错误."></a>然而直接浏览器访问时,是会出现json数据,但是当直接放在python中请求时,会出现状态码500错误.</h5></li>
+</ul>
+<p><img src="https://upload.cc/i1/2019/12/01/prJGXb.jpg" alt="20191201000300"></p>
+<p><img src="https://upload.cc/i1/2019/12/01/imguNa.jpg" alt="20191201000439"></p>
+<ul>
+<li>分析一下原因,可能是请求头没有加入最常见的<code>User-Agent</code>和<code>referer</code>后,但还是出现了如下错误:</li>
+</ul>
+<p><img src="https://upload.cc/i1/2019/12/01/imguNa.jpg" alt="20191201000439"></p>
+<ul>
+<li>后来推测可能原因在<code>Cookies</code>那里,毕竟他没有请求参数或者其他的请求意向,极大可能在<code>Cookies</code>已经存储了验证信息了,打开Cookies`存储单元,里面有很多数据,但是还不能判定哪个是验证信息.</li>
+</ul>
+<p><img src="https://upload.cc/i1/2019/12/01/xhDEpa.jpg" alt="20191201001009"></p>
+<ul>
+<li>于是我在响应头里找到了一个可疑数据<code>session</code>,他是唯一一个在请求头和响应头里面同时存在的,所以我清空该值试试响应结果,果然是500状态码,确定了该请求数据的验证信息来自于<code>session</code>.</li>
+</ul>
+<p><img src="https://upload.cc/i1/2019/12/01/r1B2Nu.jpg" alt="20191201001400"></p>
+<p><img src="https://upload.cc/i1/2019/12/01/feAYDy.jpg" alt="20191201002706"></p>
+<ul>
+<li>解决方法:直接在请求头添加<code>Cookies</code>就可以解决问题</li>
+</ul>
+<p><img src="https://upload.cc/i1/2019/12/01/UwigIa.jpg" alt="20191201001808"></p>
+<ul>
+<li>解决部分代码:<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">self.headers = &#123;</span><br><span class="line">            <span class="string">'user-agent'</span>: <span class="string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36'</span>,</span><br><span class="line">            <span class="string">'cookie'</span>: <span class="string">'session=eyJfcGVybWFuZW50Ijp0cnVlLCJwYXRoIjoiL2dhb25pIn0.EMK4Jw.SVpjwvOHNYGzsnNj72LceRTBVa4'</span>,</span><br><span class="line">            <span class="string">'referer'</span>: <span class="string">'https://www.attackmen.com/gaoni'</span></span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="源代码"><a href="#源代码" class="headerlink" title="源代码"></a><a href="https://github.com/hfg123/Spider_crawler/blob/master/Html_parse/proxies.py" target="_blank" rel="noopener">源代码</a></h3>
     </div>
 
     
@@ -388,7 +407,9 @@
           
           <div class="post-tags">
             
-              <a href="/tags/Linux/" rel="tag"<i class="fa fa-tag"></i>># Linux</a>
+              <a href="/tags/Python/" rel="tag"<i class="fa fa-tag"></i>># Python</a>
+            
+              <a href="/tags/Python-Spider/" rel="tag"<i class="fa fa-tag"></i>># Python-Spider</a>
             
           </div>
         
@@ -398,8 +419,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/03/03/Linux常用命令一/" rel="next" title="Linux常用命令一">
-                  <i class="fa fa-chevron-left"></i> Linux常用命令一
+                <a href="/2019/11/23/python爬虫五/" rel="next" title="python爬虫五">
+                  <i class="fa fa-chevron-left"></i> python爬虫五
                 </a>
               
             </div>
@@ -407,10 +428,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/05/28/python3/" rel="prev" title="Linux安装python3">
-                  Linux安装python3 <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -459,7 +476,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#常用命令之查询"><span class="nav-number">1.</span> <span class="nav-text">常用命令之查询</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#查看系统负载数"><span class="nav-number">1.1.</span> <span class="nav-text">查看系统负载数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#网卡地址查询"><span class="nav-number">1.2.</span> <span class="nav-text">网卡地址查询</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看系统内核以及架构"><span class="nav-number">1.3.</span> <span class="nav-text">查看系统内核以及架构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询登录用户"><span class="nav-number">1.4.</span> <span class="nav-text">查询登录用户</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询系统历史命令"><span class="nav-number">1.5.</span> <span class="nav-text">查询系统历史命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#显示内存使用量"><span class="nav-number">1.6.</span> <span class="nav-text">显示内存使用量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#收集并发送系统错误"><span class="nav-number">1.7.</span> <span class="nav-text">收集并发送系统错误</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#这次分享的是关于某代理IP网站爬取所遇到的问题"><span class="nav-number">1.</span> <span class="nav-text">这次分享的是关于某代理IP网站爬取所遇到的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#从这里面看-可以轻易分析出请求构造"><span class="nav-number">1.0.1.</span> <span class="nav-text">从这里面看.可以轻易分析出请求构造:</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#然而直接浏览器访问时-是会出现json数据-但是当直接放在python中请求时-会出现状态码500错误"><span class="nav-number">1.0.2.</span> <span class="nav-text">然而直接浏览器访问时,是会出现json数据,但是当直接放在python中请求时,会出现状态码500错误.</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#源代码"><span class="nav-number">2.</span> <span class="nav-text">源代码</span></a></li></ol></div>
         
       </div>
       <!--/noindex-->
