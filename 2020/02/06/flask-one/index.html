@@ -74,19 +74,21 @@
   };
 </script>
 
-  <meta name="description" content="Python 爬虫入门二爬虫的基本结构 对于爬虫来说,基本结构可以分解为:请求,解析,储存,然后再这三大步骤中在进行细分:调度器,储存队列优先级等对请求对象,数据库储存对象等,下面仅仅是简单的介绍应用而已. 请求器初级 大家都知道,我们的日常上网行为都是在浏览器上进行的,也许有人清楚地知道网络行为,实际上我们在浏览每一个网页时候,都会向服务器进行request后,服务器就会define reque">
-<meta name="keywords" content="Python,Python-Spider">
+  <meta name="description" content="初识Flask创建隔离环境 首先先创建虚拟环境,目的是为了避免众多库导致生产环境难以管理,这里我推荐使用pipenv创建一个全新的生产隔离环境。">
+<meta name="keywords" content="Falsk,Python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python爬虫二">
-<meta property="og:url" content="http://yoursite.com/2019/09/29/python爬虫二/index.html">
+<meta property="og:title" content="flask_one">
+<meta property="og:url" content="http://yoursite.com/2020/02/06/flask-one/index.html">
 <meta property="og:site_name" content="SunRelease">
-<meta property="og:description" content="Python 爬虫入门二爬虫的基本结构 对于爬虫来说,基本结构可以分解为:请求,解析,储存,然后再这三大步骤中在进行细分:调度器,储存队列优先级等对请求对象,数据库储存对象等,下面仅仅是简单的介绍应用而已. 请求器初级 大家都知道,我们的日常上网行为都是在浏览器上进行的,也许有人清楚地知道网络行为,实际上我们在浏览每一个网页时候,都会向服务器进行request后,服务器就会define reque">
+<meta property="og:description" content="初识Flask创建隔离环境 首先先创建虚拟环境,目的是为了避免众多库导致生产环境难以管理,这里我推荐使用pipenv创建一个全新的生产隔离环境。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-03T09:29:17.035Z">
+<meta property="og:image" content="https://i.niupic.com/images/2020/02/07/6nrj.jpg">
+<meta property="og:updated_time" content="2020-02-07T05:48:13.586Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python爬虫二">
-<meta name="twitter:description" content="Python 爬虫入门二爬虫的基本结构 对于爬虫来说,基本结构可以分解为:请求,解析,储存,然后再这三大步骤中在进行细分:调度器,储存队列优先级等对请求对象,数据库储存对象等,下面仅仅是简单的介绍应用而已. 请求器初级 大家都知道,我们的日常上网行为都是在浏览器上进行的,也许有人清楚地知道网络行为,实际上我们在浏览每一个网页时候,都会向服务器进行request后,服务器就会define reque">
-  <link rel="canonical" href="http://yoursite.com/2019/09/29/python爬虫二/">
+<meta name="twitter:title" content="flask_one">
+<meta name="twitter:description" content="初识Flask创建隔离环境 首先先创建虚拟环境,目的是为了避免众多库导致生产环境难以管理,这里我推荐使用pipenv创建一个全新的生产隔离环境。">
+<meta name="twitter:image" content="https://i.niupic.com/images/2020/02/07/6nrj.jpg">
+  <link rel="canonical" href="http://yoursite.com/2020/02/06/flask-one/">
 
 
 <script id="page-configurations">
@@ -100,7 +102,7 @@
   };
 </script>
 
-  <title>python爬虫二 | SunRelease</title>
+  <title>flask_one | SunRelease</title>
   
 
 
@@ -241,7 +243,7 @@
   
   
   <div class="post-block post">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/29/python爬虫二/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/06/flask-one/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="SunRelease">
@@ -253,7 +255,7 @@
       <meta itemprop="name" content="SunRelease">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">python爬虫二
+        <h2 class="post-title" itemprop="name headline">flask_one
 
           
         </h2>
@@ -269,7 +271,7 @@
                 
               
 
-              <time title="创建时间：2019-09-29 23:47:32" itemprop="dateCreated datePublished" datetime="2019-09-29T23:47:32+08:00">2019-09-29</time>
+              <time title="创建时间：2020-02-06 23:19:39" itemprop="dateCreated datePublished" datetime="2020-02-06T23:19:39+08:00">2020-02-06</time>
             </span>
           
             
@@ -280,7 +282,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-11-03 17:29:17" itemprop="dateModified" datetime="2019-11-03T17:29:17+08:00">2019-11-03</time>
+                <time title="修改时间：2020-02-07 13:48:13" itemprop="dateModified" datetime="2020-02-07T13:48:13+08:00">2020-02-07</time>
               </span>
             
           
@@ -290,7 +292,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Python-Spider/" itemprop="url" rel="index"><span itemprop="name">Python-Spider</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Flask/" itemprop="url" rel="index"><span itemprop="name">Flask</span></a></span>
 
                 
                 
@@ -317,90 +319,146 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Python-爬虫入门二"><a href="#Python-爬虫入门二" class="headerlink" title="Python 爬虫入门二"></a>Python 爬虫入门二</h1><h3 id="爬虫的基本结构"><a href="#爬虫的基本结构" class="headerlink" title="爬虫的基本结构"></a>爬虫的基本结构</h3><ul>
-<li>对于爬虫来说,基本结构可以分解为:<strong>请求</strong>,<strong>解析</strong>,<strong>储存</strong>,然后再这三大步骤中在进行细分:调度器,储存队列优先级等对请求对象,数据库储存对象等,下面仅仅是简单的介绍应用而已.</li>
-</ul><h4 id="请求器初级"><a href="#请求器初级" class="headerlink" title="请求器初级"></a>请求器初级</h4><ul>
-<li>大家都知道,我们的日常上网行为都是在浏览器上进行的,也许有人清楚地知道网络行为,实际上我们在浏览每一个网页时候,都会向服务器进行<code>request</code>后,服务器就会<code>define request</code>,然后发送<code>response</code>给客户端,客户端再进行确认后,渲染到浏览器上,其中用户交互时,会不断的<code>get</code>,<code>post</code>数据<code>data</code>到服务器,数据再实现相应的回应请求,这样基本就实现了请求功能.</li>
-</ul><a id="more"></a>
-
-<ul>
-<li>为什么用<code>python</code>进行爬虫研究呢,主要是python开发时间短,而且第三方库引进可以大大减少造轮子的时间,大部分请求的工作可以直接引用<code>k神的requests</code>这个package就可以实现基本的请求功能了.</li>
-</ul>
-<ul>
-<li>首先安装该库</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install requests</span><br></pre></td></tr></table></figure>
-<ul>
-<li>对网址进行请求</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># -*- coding : utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_response</span><span class="params">()</span>:</span></span><br><span class="line"></span><br><span class="line">    url=<span class="string">'www.baidu.com'</span></span><br><span class="line"></span><br><span class="line">    response=requests.get(url=url)                  <span class="comment">#请求数据</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> response.status_code==<span class="number">200</span>:</span><br><span class="line"></span><br><span class="line">        res1=response.text                          <span class="comment">#编码response</span></span><br><span class="line"></span><br><span class="line">        res2=response.content.decode(<span class="string">'utf-8'</span>)       <span class="comment">#编码response</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line"></span><br><span class="line">        print(<span class="string">"requests fail"</span>)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line"></span><br><span class="line">    get_response()</span><br></pre></td></tr></table></figure>
-<ul>
-<li>关于编码模式</li>
-</ul>
-<blockquote>
-<p><strong>text</strong>  由官方文档介绍,可以理解为:根据HTTP头部请求的编码模式,<code>智能</code>对服务器的内容进行编码.</p>
-<p><strong>content</strong> 可以理解为:以<code>字节</code>的方式请求数据流,然后自己自定义编码数据字节内容.</p>
+        <h3 id="初识Flask"><a href="#初识Flask" class="headerlink" title="初识Flask"></a>初识Flask</h3><h5 id="创建隔离环境"><a href="#创建隔离环境" class="headerlink" title="创建隔离环境"></a>创建隔离环境</h5><blockquote>
+<p>首先先创建虚拟环境,目的是为了避免众多库导致生产环境难以管理,这里我推荐使用<code>pipenv</code>创建一个全新的生产隔离环境。</p>
 </blockquote>
+<a id="more"></a>
+<p> 首先创建一个文件夹,命令行下敲下面代码,<script type="math/tex">`仅仅表示`Win`和`Linux`下的前缀`<`和`</script>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$pip install pipenv</span><br><span class="line"></span><br><span class="line">$pipenv install</span><br></pre></td></tr></table></figure>
+<p>安装好后,直接激活虚拟环境或者代码激活。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">显示激活:</span><br><span class="line">$pipenv shell  </span><br><span class="line"></span><br><span class="line">隐式激活:</span><br><span class="line">$pipenv run python model.py</span><br></pre></td></tr></table></figure>
 <ul>
-<li>关于参数,下面我自己列出来几个比较常用的参数</li>
+<li>另外,可以使用<code>pip list</code>或者<code>pipenv graph</code>查看<code>package</code>类型,方便管理。</li>
 </ul>
+<h5 id="安装生产库"><a href="#安装生产库" class="headerlink" title="安装生产库"></a>安装生产库</h5><blockquote>
+<p>这里可以选择使用命令行直接安装或者我推荐直接借助<code>pycharm</code>直接生成<code>Flask</code>生产环境和环境管理库<code>python-dotenv</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pipenv install Flask</span><br><span class="line">pipnev install python-dotenv</span><br></pre></td></tr></table></figure></p>
+<p>安装好后,就直接在<code>pycharm</code>中创建如下的文件类型</p>
+</blockquote>
+<p><img src="https://i.niupic.com/images/2020/02/07/6nrj.jpg" alt="20200207110130"></p>
+<p align="center">各种文件说明</p>
+
 <div class="table-container">
 <table>
 <thead>
 <tr>
-<th style="text-align:center">参数</th>
-<th style="text-align:center">类型</th>
-<th style="text-align:center">例子</th>
+<th style="text-align:center">文件</th>
+<th style="text-align:center">说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center">url</td>
-<td style="text-align:center">str</td>
-<td style="text-align:center">url地址</td>
+<td style="text-align:center"><code>static</code></td>
+<td style="text-align:center">静态文件,例如各种<code>css</code>,<code>html</code>框架</td>
 </tr>
 <tr>
-<td style="text-align:center">data</td>
-<td style="text-align:center">dict,str</td>
-<td style="text-align:center">请求数据</td>
+<td style="text-align:center"><code>templates</code></td>
+<td style="text-align:center">模板文件,例如写好的模块</td>
 </tr>
 <tr>
-<td style="text-align:center">allow_redirects</td>
-<td style="text-align:center">True</td>
-<td style="text-align:center">定义重定向</td>
+<td style="text-align:center"><code>.env</code></td>
+<td style="text-align:center">作为生产环境的,可存放私密代码</td>
 </tr>
 <tr>
-<td style="text-align:center">headers</td>
-<td style="text-align:center">dict</td>
-<td style="text-align:center">自定义请求头</td>
+<td style="text-align:center"><code>.flaskenv</code></td>
+<td style="text-align:center">作为开发环境,可安装<code>debugger</code>调试代码</td>
 </tr>
 <tr>
-<td style="text-align:center">params</td>
-<td style="text-align:center">dict</td>
-<td style="text-align:center">请求参数字典类型</td>
+<td style="text-align:center"><code>app.py</code></td>
+<td style="text-align:center"><code>flask</code>应用实例化,可作为接口</td>
 </tr>
 <tr>
-<td style="text-align:center">timeout</td>
-<td style="text-align:center">float</td>
-<td style="text-align:center">设定服务器响应时间</td>
+<td style="text-align:center"><code>Pipfile</code></td>
+<td style="text-align:center">定义各种环境下的库文件</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>Pipfile.lock</code></td>
+<td style="text-align:center"><code>pipenv</code>具有的安全锁定文件</td>
 </tr>
 </tbody>
 </table>
 </div>
 <ul>
-<li>更多具体高级用法可以参考<a href="https://requests.kennethreitz.org//zh_CN/latest/index.html" target="_blank" rel="noopener"><strong>官方文档</strong></a></li>
+<li>其中<code>.flaskenv</code>可以先写入下面规则,作为开发环境。</li>
 </ul>
-<h3 id="解析器"><a href="#解析器" class="headerlink" title="解析器"></a>解析器</h3><ul>
-<li><p>关于解析器,其实大部分来说是前端的基本内容,比如网页的嵌套等,直接来说就是剔除没有用的数据,获取自己想要的数据.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FLASK_ENV=development</span><br></pre></td></tr></table></figure>
+<h5 id="Flask运行"><a href="#Flask运行" class="headerlink" title="Flask运行"></a>Flask运行</h5><ul>
+<li><p><code>Flask</code>运行可有以下方式:</p>
+<blockquote>
+<p>命令行下输入代码,温馨提示:运行时<code>flask</code>使用的是自己内置的服务器,如要部署上线,则需要重新选择自己的服务器。</p>
+</blockquote>
 </li>
-<li><p>解析器其实就是对文本内容进行增减删改操作,按照自己定义的规则解析内容,小型解析可以直接用正则表达式直接上,我刚开始的时候也是直接正则提取,因为<code>beautifulsoup</code>,和<code>xpath</code>框架使用的规则比较繁琐,对于初级者来说,也许还要基本了解以下前端网页的节点关系,但是再过段时间,<code>xpath</code>等框架确实比正则便捷多了,直接构造规则,而且稳定性比正则好,因为节点不容易改变,而内容可以变化.</p>
+<li><p>默认运行本机的<code>5000</code>端口。</p>
 </li>
 </ul>
-<h3 id="储存器"><a href="#储存器" class="headerlink" title="储存器"></a>储存器</h3><ul>
-<li>顾名思义,就是把数据给储存到文件或者数据库中,小型的文件就直接保存文件,大型的数据可以储存到数据库中,其中<strong>pymyspl</strong>和<strong>pymongo</strong>库直接和<strong>myspl</strong>,<strong>mongo</strong>数据库建立联系,便于调用储存,包装为库后,只需要端口和用户密码即可储存数据,大大提高了工作效率.</li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$flask run</span><br></pre></td></tr></table></figure>
+<ul>
+<li>如自己的服务器是<code>外网</code>,则可以使用下面代码,即默认所有人可以访问。</li>
 </ul>
-<h4 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h4><ul>
-<li>作为初学者,我们可以了解为什么爬虫的结构要分成这样,因为后期爬虫框架已经非常成熟,例如强大的<a href="https://scrapy.org/" target="_blank" rel="noopener"><strong>scrapy</strong></a>框架直接封装爬虫结构,只需要在设置填写几个参数,设置优先级以及构造爬写规则,它就可以自动爬取数据了,但是至于它是如何实现这些功能的,这就需要我们在初级时候通过分部学习爬虫的结构和基本理解爬虫原理,只有如此,我们才能更好的使用框架来进行数据爬取.</li>
+<blockquote>
+<p>温馨提示:需要在自己的服务器上配置<code>安全组入门策略</code>,即默认其他人可以访问<code>5000端口</code>。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$flask run --host 0.0.0.0</span><br></pre></td></tr></table></figure>
+<ul>
+<li>可以改变其访问端口,前提是该端口并未被其他服务占用。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$flask run --port 9300</span><br></pre></td></tr></table></figure>
+<h5 id="FlaskShell"><a href="#FlaskShell" class="headerlink" title="FlaskShell"></a>FlaskShell</h5><blockquote>
+<p>很多情况下,我们并没有用到<code>PythonShell</code>,因为在开发<code>Flask</code>程序时,<code>Flask</code>已经有自带的<code>Shell</code>解释型编译器了。</p>
+</blockquote>
+<ul>
+<li>进入<code>FlaskShell</code></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$flask shell</span><br></pre></td></tr></table></figure>
+<p>-可以执行各种查询,更新配置指令,这里我使用$$$$表示已经进入<code>FlaskShell</code>中。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$$ app</span><br><span class="line">$$ app.name    #查询实例化程序入口文件名</span><br></pre></td></tr></table></figure>
+<ul>
+<li>退出<code>FlaskShell</code>系统</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">系统</th>
+<th style="text-align:center">方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>Windows</code></td>
+<td style="text-align:center"><code>Ctrl</code>+<code>Z</code>+<code>Enter</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>Linux</code></td>
+<td style="text-align:center"><code>Ctrl</code>+<code>D</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>Mac OS</code></td>
+<td style="text-align:center"><code>Ctrl</code>+<code>D</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h5 id="Flask配置"><a href="#Flask配置" class="headerlink" title="Flask配置"></a><code>Flask</code>配置</h5><blockquote>
+<p>加载配置时,配置名必须是大写,否则配置无效。</p>
+</blockquote>
+<ul>
+<li>可以使用字典类型直接加载配置。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app.config[<span class="string">'ADMIN'</span>]=<span class="string">'administrator'</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>或者更新多个配置。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">app.config.update(</span><br><span class="line">    VISIABLE=<span class="literal">True</span>,</span><br><span class="line">    KEY=<span class="string">'#&amp;231_jdoq9023&amp;'</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h5 id="路由配置规则"><a href="#路由配置规则" class="headerlink" title="路由配置规则"></a>路由配置规则</h5><ul>
+<li>当每次要更改相应的<code>URL</code>位置时,可以使用<code>url_for()</code>函数获取动态的<code>url</code>。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@app.route('/')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">"Hello,Flask!"</span></span><br><span class="line"></span><br><span class="line">def get_urls();</span><br><span class="line">    print(url_for(<span class="string">'index'</span>))</span><br><span class="line"></span><br><span class="line">get_urls()</span><br><span class="line"></span><br><span class="line"><span class="comment">## 结果,打印出路由根'/'</span></span><br><span class="line">&gt;&gt; <span class="string">'/'</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>当动态修改路由路径时,有:</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@app.route('/flask/&lt;name&gt;')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">edit_name</span><span class="params">(name)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">"Hello,Flask+%s!"</span> %name</span><br><span class="line"></span><br><span class="line">def get_urls();</span><br><span class="line">    print(url_for(<span class="string">'edit_name'</span>,name=<span class="string">"job"</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment">## 结果为/flask/job</span></span><br><span class="line"></span><br><span class="line">&gt;&gt;/flask/job</span><br></pre></td></tr></table></figure>
+<ul>
+<li>在使用<code>url_for</code>函数时,只能得到内部地址,根地址:即<code>https://域名</code>+<code>内部地址</code>是得不到的,要想生成完整的外部访问地址,需要提供参数<code>_external=True</code>,即可生成完整地址。</li>
 </ul>
 
     </div>
@@ -427,9 +485,9 @@
           
           <div class="post-tags">
             
-              <a href="/tags/Python/" rel="tag"<i class="fa fa-tag"></i>># Python</a>
+              <a href="/tags/Falsk/" rel="tag"<i class="fa fa-tag"></i>># Falsk</a>
             
-              <a href="/tags/Python-Spider/" rel="tag"<i class="fa fa-tag"></i>># Python-Spider</a>
+              <a href="/tags/Python/" rel="tag"<i class="fa fa-tag"></i>># Python</a>
             
           </div>
         
@@ -439,8 +497,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/09/29/Linux常用命令四/" rel="next" title="Linux常用命令四">
-                  <i class="fa fa-chevron-left"></i> Linux常用命令四
+                <a href="/2019/12/01/python爬虫六/" rel="next" title="python爬虫六">
+                  <i class="fa fa-chevron-left"></i> python爬虫六
                 </a>
               
             </div>
@@ -448,10 +506,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/10/05/python爬虫三/" rel="prev" title="python爬虫三">
-                  python爬虫三 <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -500,7 +554,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Python-爬虫入门二"><span class="nav-number">1.</span> <span class="nav-text">Python 爬虫入门二</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#爬虫的基本结构"><span class="nav-number">1.0.1.</span> <span class="nav-text">爬虫的基本结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#请求器初级"><span class="nav-number">1.0.1.1.</span> <span class="nav-text">请求器初级</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解析器"><span class="nav-number">1.0.2.</span> <span class="nav-text">解析器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#储存器"><span class="nav-number">1.0.3.</span> <span class="nav-text">储存器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#后续"><span class="nav-number">1.0.3.1.</span> <span class="nav-text">后续</span></a></li></ol></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#初识Flask"><span class="nav-number">1.</span> <span class="nav-text">初识Flask</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#创建隔离环境"><span class="nav-number">1.0.1.</span> <span class="nav-text">创建隔离环境</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#安装生产库"><span class="nav-number">1.0.2.</span> <span class="nav-text">安装生产库</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Flask运行"><span class="nav-number">1.0.3.</span> <span class="nav-text">Flask运行</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#FlaskShell"><span class="nav-number">1.0.4.</span> <span class="nav-text">FlaskShell</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Flask配置"><span class="nav-number">1.0.5.</span> <span class="nav-text">Flask配置</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#路由配置规则"><span class="nav-number">1.0.6.</span> <span class="nav-text">路由配置规则</span></a></li></ol></li></ol></li></ol></div>
         
       </div>
       <!--/noindex-->
